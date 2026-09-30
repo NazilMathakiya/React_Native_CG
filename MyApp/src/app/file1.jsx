@@ -10,7 +10,7 @@ export default function FileSystem() {
     console.log(imageDir);
 
     if (!imageDir.exists) {
-      imageDir.create();
+      imageDir.create(); 
     }
 
     const thumbnail = new File(imageDir, "images");
