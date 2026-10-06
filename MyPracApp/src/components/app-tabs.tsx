@@ -37,15 +37,18 @@ export default function AppTabs() {
         <NativeTabs.Trigger.Label>Counter</NativeTabs.Trigger.Label>
       </NativeTabs.Trigger>
 
-        {/* API */} 
-      <NativeTabs.Trigger name="fetchApi">
-        <NativeTabs.Trigger.Label>API</NativeTabs.Trigger.Label>
-      </NativeTabs.Trigger>
-
        {/* download */} 
       <NativeTabs.Trigger name="download">
         <NativeTabs.Trigger.Label>download</NativeTabs.Trigger.Label>
       </NativeTabs.Trigger>
+
+      {/* Practice */} 
+      <NativeTabs.Trigger name="prac1">
+        <NativeTabs.Trigger.Label>Practice</NativeTabs.Trigger.Label>
+      </NativeTabs.Trigger>
+
+
+
 
 
     </NativeTabs>
