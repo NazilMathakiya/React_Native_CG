@@ -64,6 +64,6 @@ const styles = StyleSheet.create({
 
   progress: {
     fontSize: 17,
-    marginTop: 22,
+    marginTop: 23,
   },
 });
