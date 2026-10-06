@@ -42,6 +42,11 @@ export default function AppTabs() {
         <NativeTabs.Trigger.Label>API</NativeTabs.Trigger.Label>
       </NativeTabs.Trigger>
 
+       {/* download */} 
+      <NativeTabs.Trigger name="download">
+        <NativeTabs.Trigger.Label>download</NativeTabs.Trigger.Label>
+      </NativeTabs.Trigger>
+
 
     </NativeTabs>
 
