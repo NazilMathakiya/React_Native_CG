@@ -16,7 +16,7 @@ export default function pract() {
       <Text
         style={{
           textAlign: "center",
-          color: "white",
+          color: "white",                                                                     
         }}
       >
         Hellooo! Nazil

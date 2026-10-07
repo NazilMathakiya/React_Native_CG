@@ -11,7 +11,7 @@ export default function Prac() {
         justifyContent: "center",
         alignItems: "center",
       }}
-    >
+    > 
       <Text>Nazil</Text>
 
       <FlatList
