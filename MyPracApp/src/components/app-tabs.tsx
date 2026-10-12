@@ -12,10 +12,9 @@ export default function AppTabs() {
       backgroundColor={colors.background}
       indicatorColor={colors.backgroundElement}
       labelStyle={{ selected: { color: colors.text } }}
-    >
+      labelVisibilityMode="labeled">
       <NativeTabs.Trigger name="index">
         <NativeTabs.Trigger.Label>Home</NativeTabs.Trigger.Label>
-
         <NativeTabs.Trigger.Icon
           src={require('@/assets/images/tabIcons/home.png')}
           renderingMode="template"
@@ -24,35 +23,38 @@ export default function AppTabs() {
 
       <NativeTabs.Trigger name="explore">
         <NativeTabs.Trigger.Label>Explore</NativeTabs.Trigger.Label>
-
         <NativeTabs.Trigger.Icon
           src={require('@/assets/images/tabIcons/explore.png')}
           renderingMode="template"
         />
       </NativeTabs.Trigger>
 
-
-      {/* counter */}
-      <NativeTabs.Trigger name="CounterPrac">
-        <NativeTabs.Trigger.Label>Counter</NativeTabs.Trigger.Label>
+       <NativeTabs.Trigger name="counter">
+        <NativeTabs.Trigger.Label>counter</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Icon
+          src={require('@/assets/images/tabIcons/explore.png')}
+          renderingMode="template"
+        />
       </NativeTabs.Trigger>
 
-       {/* download */} 
-      <NativeTabs.Trigger name="download">
-        <NativeTabs.Trigger.Label>download</NativeTabs.Trigger.Label>
+      <NativeTabs.Trigger name="products">
+        <NativeTabs.Trigger.Label>products</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Icon
+          src={require('@/assets/images/tabIcons/explore.png')}
+          renderingMode="template"
+        />
       </NativeTabs.Trigger>
 
-      {/* Practice */} 
-      <NativeTabs.Trigger name="prac1">
-        <NativeTabs.Trigger.Label>Practice</NativeTabs.Trigger.Label>
+      <NativeTabs.Trigger name="cart">
+        <NativeTabs.Trigger.Label>cart</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Icon
+          src={require('@/assets/images/tabIcons/explore.png')}
+          renderingMode="template"
+        />
       </NativeTabs.Trigger>
 
-
-
-
+       
 
     </NativeTabs>
-
-    
   );
 }
