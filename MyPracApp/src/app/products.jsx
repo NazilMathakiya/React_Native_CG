@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { View, Text, Pressable, ScrollView } from "react-native";
 import { router } from "expo-router";
@@ -39,11 +38,7 @@ export default function Products() {
       };
 
       const updatedCart = cartItems
-        .map((item) =>
-          item.id === id
-            ? { ...item, quantity: newQty }
-            : item
-        )
+        .map((item) => (item.id === id ? { ...item, quantity: newQty } : item))
         .filter((item) => item.quantity > 0);
 
       updateCart(updatedCart);
@@ -62,29 +57,21 @@ export default function Products() {
     if (old) {
       updateCart(
         cartItems.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity }
-            : item
-        )
+          item.id === product.id ? { ...item, quantity } : item,
+        ),
       );
     } else {
-      updateCart([
-        ...cartItems,
-        { ...product, quantity },
-      ]);
+      updateCart([...cartItems, { ...product, quantity }]);
     }
   };
 
-  const count = Object.values(qty).reduce(
-    (total, value) => total + value,
-    0
-  );
+  const count = Object.values(qty).reduce((total, value) => total + value, 0);
 
   return (
     <View
       style={{
         flex: 1,
-        backgroundColor: "#f2f2f2",
+        backgroundColor: "white",
         padding: 15,
       }}
     >
@@ -97,9 +84,7 @@ export default function Products() {
           backgroundColor: "white",
         }}
       >
-        <Text style={{ color: "black" }}>
-          Cart ({count})
-        </Text>
+        <Text style={{ color: "black" }}>Cart ({count})</Text>
       </Pressable>
 
       <ScrollView>
@@ -109,18 +94,14 @@ export default function Products() {
             style={{
               backgroundColor: "white",
               borderWidth: 1,
-              borderColor: "#ddd",
+              borderColor: "white",
               padding: 12,
               marginTop: 12,
             }}
           >
-            <Text style={{ color: "black", fontSize: 18 }}>
-              {item.name}
-            </Text>
+            <Text style={{ color: "black", fontSize: 18 }}>{item.name}</Text>
 
-            <Text style={{ color: "black" }}>
-              Price: ₹{item.price}
-            </Text>
+            <Text style={{ color: "black" }}>Price: ₹{item.price}</Text>
 
             <View
               style={{
@@ -131,19 +112,13 @@ export default function Products() {
               }}
             >
               <Pressable onPress={() => changeQty(item.id, -1)}>
-                <Text style={{ color: "black", fontSize: 22 }}>
-                  -
-                </Text>
+                <Text style={{ color: "black", fontSize: 22 }}>-</Text>
               </Pressable>
 
-              <Text style={{ color: "black" }}>
-                {qty[item.id] || 0}
-              </Text>
+              <Text style={{ color: "black" }}>{qty[item.id] || 0}</Text>
 
               <Pressable onPress={() => changeQty(item.id, 1)}>
-                <Text style={{ color: "black", fontSize: 22 }}>
-                  +
-                </Text>
+                <Text style={{ color: "black", fontSize: 22 }}>+</Text>
               </Pressable>
             </View>
 

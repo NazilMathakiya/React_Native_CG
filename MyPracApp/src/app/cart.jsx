@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { View, Text, ScrollView } from "react-native";
 import { cartItems, subscribeCart } from "./products";
@@ -12,7 +11,7 @@ export default function Cart() {
 
   const total = items.reduce(
     (sum, item) => sum + item.price * item.quantity,
-    0
+    0,
   );
 
   if (items.length === 0) {
@@ -20,7 +19,7 @@ export default function Cart() {
       <View
         style={{
           flex: 1,
-          backgroundColor: "#f2f2f2",
+          backgroundColor: "white",
         }}
       />
     );
@@ -30,7 +29,7 @@ export default function Cart() {
     <ScrollView
       style={{
         flex: 1,
-        backgroundColor: "#f2f2f2",
+        backgroundColor: "white",
       }}
       contentContainerStyle={{ padding: 15 }}
     >
@@ -40,22 +39,16 @@ export default function Cart() {
           style={{
             backgroundColor: "white",
             borderWidth: 1,
-            borderColor: "#ddd",
+            borderColor: "white",
             padding: 10,
             marginBottom: 10,
           }}
         >
-          <Text style={{ color: "black", fontSize: 18 }}>
-            {item.name}
-          </Text>
+          <Text style={{ color: "black", fontSize: 18 }}>{item.name}</Text>
 
-          <Text style={{ color: "black" }}>
-            Price: ₹{item.price}
-          </Text>
+          <Text style={{ color: "black" }}>Price: ₹{item.price}</Text>
 
-          <Text style={{ color: "black" }}>
-            Quantity: {item.quantity}
-          </Text>
+          <Text style={{ color: "black" }}>Quantity: {item.quantity}</Text>
 
           <Text style={{ color: "black" }}>
             Subtotal: ₹{item.price * item.quantity}
@@ -76,4 +69,3 @@ export default function Cart() {
     </ScrollView>
   );
 }
-
