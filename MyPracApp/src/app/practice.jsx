@@ -1,12 +1,5 @@
-
 import { useState } from "react";
-import {
-  View,
-  Text,
-  Button,
-  Pressable,
-  TouchableOpacity,
-} from "react-native";
+import { View, Text, Button, Pressable, TouchableOpacity } from "react-native";
 
 export default function Practice() {
   const [count, setCount] = useState(0);
@@ -87,11 +80,7 @@ export default function Practice() {
           justifyContent: "center",
           alignItems: "center",
           backgroundColor:
-            count >= 10
-              ? "gray"
-              : pressed
-              ? "#a00000"
-              : "#fc1414",
+            count >= 10 ? "gray" : pressed ? "#a00000" : "#fc1414",
           borderWidth: 2,
           borderColor: "#80fc14",
           borderRadius: 88,
@@ -110,7 +99,7 @@ export default function Practice() {
       </Pressable>
 
       {/* BUTTON */}
-      <Button title="Reset Counter" onPress={reset} />
+      <Button title="Reset Counter ➡️" onPress={reset} color="yellow"/>
 
       {/* TOUCHABLE OPACITY */}
       <TouchableOpacity
