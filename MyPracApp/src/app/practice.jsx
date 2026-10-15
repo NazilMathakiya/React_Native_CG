@@ -99,7 +99,7 @@ export default function Practice() {
       </Pressable>
 
       {/* BUTTON */}
-      <Button title="Reset Counter ➡️" onPress={reset} color="yellow"/>
+      <Button title="Reset Counter ➡️" onPress={reset} color="pink"/>
 
       {/* TOUCHABLE OPACITY */}
       <TouchableOpacity

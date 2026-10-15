@@ -28,16 +28,16 @@ export default function AppTabs() {
           renderingMode="template"
         />
       </NativeTabs.Trigger>
-
+{/* 
        <NativeTabs.Trigger name="counter">
         <NativeTabs.Trigger.Label>counter</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
           src={require('@/assets/images/tabIcons/explore.png')}
           renderingMode="template"
         />
-      </NativeTabs.Trigger>
+      </NativeTabs.Trigger> */}
 
-      <NativeTabs.Trigger name="products">
+      {/* <NativeTabs.Trigger name="products">
         <NativeTabs.Trigger.Label>products</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
           src={require('@/assets/images/tabIcons/explore.png')}
@@ -51,17 +51,32 @@ export default function AppTabs() {
           src={require('@/assets/images/tabIcons/explore.png')}
           renderingMode="template"
         />
-      </NativeTabs.Trigger>
+      </NativeTabs.Trigger> */}
 
-       <NativeTabs.Trigger name="practice">
+       {/* <NativeTabs.Trigger name="practice">
         <NativeTabs.Trigger.Label>practice</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Icon
+          src={require('@/assets/images/tabIcons/explore.png')}
+          renderingMode="template"
+        />
+      </NativeTabs.Trigger> */}
+
+       <NativeTabs.Trigger name="sectionlist">
+        <NativeTabs.Trigger.Label>sectionlist</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
           src={require('@/assets/images/tabIcons/explore.png')}
           renderingMode="template"
         />
       </NativeTabs.Trigger>
 
-       
+      <NativeTabs.Trigger name="prac3">
+        <NativeTabs.Trigger.Label>prac3</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Icon
+          src={require('@/assets/images/tabIcons/explore.png')}
+          renderingMode="template"
+        />
+      </NativeTabs.Trigger>
+
 
     </NativeTabs>
   );
