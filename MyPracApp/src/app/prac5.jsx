@@ -1,86 +1,76 @@
+import {
+  Text,
+  View,
+  TextInput,
+  StyleSheet,
+  Pressable,
+  FlatList,
+} from "react-native";
 import { useState } from "react";
-import { View, Text, Pressable, TextInput, StyleSheet, FlatList } from "react-native";
+
 export default function Prac() {
   const [input, setInput] = useState({
     name: "",
     email: "",
-    pass: ""
+    pass: "",
   });
-
   const [data, setData] = useState([]);
- 
-
-  const handlePress = () => {
-
-    setData([...data, obj])
-    setName("")
-    setEmail("")
-    setPass("")
+  const handleSubmit = () => {
+    setData([...data, input]);
+    setInput({
+      name: "",
+      email: "",
+      pass: "",
+    });
   };
 
-
   return (
-    <View style={styles.viewstyle}>
+    <View style={styles.container}>
+      <Text style={styles.heading}>Form</Text>
       <TextInput
+        onChangeText={(ele) => setInput({ ...input, name: ele })}
         value={input.name}
-        onChangeText={setInput.name}
-        placeholder="Enter Name:"
-        style={styles.txtinputstyle}
+        placeholder="Name"
       />
       <TextInput
+        onChangeText={(ele) => setInput({ ...input, email: ele })}
         value={input.email}
-        onChangeText={setInput.email}
-        placeholder="Enter email:"
-        style={styles.txtinputstyle}
+        placeholder="Email"
       />
       <TextInput
+        onChangeText={(ele) => setInput({ ...input, pass: ele })}
         value={input.pass}
-        onChangeText={setInput.pass}
-        placeholder="Enter pass:"
-        style={styles.txtinputstyle}
+        placeholder="Password"
       />
 
-      <Pressable onPress={handlePress} style={styles.btnstyle}>
-        <Text>Click here!</Text>
+      <Pressable onPress={handleSubmit}>
+        <Text>Submit</Text>
       </Pressable>
 
-
-      <FlatList data={data}
-      keyExtractor={(ele)=>ele.id}
-
-      renderItem={({item})=>(
-        <View>
-          <Text>{item.input.name}</Text>
-          <Text>{item.input.email}</Text>
-          <Text>{item.input.pass}</Text>
-        </View>
-      )}
+      <FlatList
+        data={data}
+        keyExtractor={(item, index) => index.toString()}
+        renderItem={({ item }) => (
+          <View>
+            <Text>{item.name}</Text>
+            <Text>{item.email}</Text>
+            <Text>{item.pass}</Text>
+          </View>
+        )}
       />
-  
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  viewstyle: {
-    justifyContent: "center",
-    alignItems: "center",
+  container: {
     flex: 1,
-    backgroundColor: "white",
-    marginTop:50
+    gap: 20,
+    padding: 20,
+    backgroundColor: "orange",
   },
-  textstyle: {
-    textAlign: "center",
-    flex: 1,
-    fontSize: 40,
-  },
-  btnstyle: {
-    backgroundColor: "blue",
-    borderWidth: 5,
-    borderColor: "black",
-  },
-  txtinputstyle: {
-    backgroundColor: "white",
-    borderWidth:2
+  heading: {
+    fontSize: 50,
+    color: "white",
   },
 });
