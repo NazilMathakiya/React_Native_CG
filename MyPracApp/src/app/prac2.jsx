@@ -14,7 +14,7 @@ export default function Practice() {
       style={{
         backgroundColor: "red",
         justifyContent: "center",
-        flex: 1,
+        flex: 1
       }}
     >
       <TextInput
