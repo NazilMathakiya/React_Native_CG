@@ -1,11 +1,4 @@
-import {
-  Text,
-  View,
-  TextInput,
-  StyleSheet,
-  Pressable,
-  FlatList,
-} from "react-native";
+import {Text,View,TextInput,StyleSheet,Pressable,FlatList} from "react-native";
 import { useState } from "react";
 
 export default function Prac() {
